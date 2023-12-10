@@ -33,7 +33,7 @@ def on_draw():
 if __name__ == "__main__":
     # Tell pyglet to do its thing
     # pyglet.app.run()
-    img = pyglet.image.load("tests/bg1.jpg")
+    img = pyglet.image.load("tests/bg.jepg")
     img.anchor_x = img.width // 2
     img.anchor_y = img.height // 2
 

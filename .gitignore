@@ -132,3 +132,8 @@ resource/
 tests/*.jpg
 tests/*.jpeg
 tests/*.bmp
+.DS_Store
+*.mp3
+*.mid
+*.jpeg
+*.jpg
