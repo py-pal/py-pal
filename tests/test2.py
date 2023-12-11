@@ -12,8 +12,13 @@ label = pyglet.text.Label("仙剑奇侠传一 高清重制版",
 bg_music_file_name = "/Users/alan/mywork/pypal/tests/pal1.mp3"
 # bg_music_file_name = "1.mp3"
 
+
 media_file_obj = pyglet.media.load(bg_music_file_name)
-media = pyglet.media.StaticSource(media_file_obj)
+# media = pyglet.media.StaticSource(media_file_obj)
+# 播放 非 `.wav` 等压缩格式音频需要 `ffmpeg`
+#   `brew install ffmpeg`
+media_file_obj.play()
+
 
 image = pyglet.resource.image('bg.jpeg')
 
@@ -21,7 +26,6 @@ image = pyglet.resource.image('bg.jpeg')
 def on_draw():
     window.clear()
     image.blit(0, 0)
-    media.play()
     label.draw()
 
 
