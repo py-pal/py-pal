@@ -17,7 +17,7 @@ def getOSDynamicLibraryExtension():
 
 def getPallibPath():
     return (os.path.dirname(sys.argv[0]) if sys.argv[
-        0] else ".") + "/../paylibrary/libpallib." + getOSDynamicLibraryExtension()
+        0] else ".") + "/../pylibrary/libpallib." + getOSDynamicLibraryExtension()
 
 
 def PallibExist():
