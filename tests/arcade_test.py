@@ -22,7 +22,9 @@ class MyGame(arcade.Window):
         # self.background_color = arcade.color.BEIGE
         self.text_angle = 0
         self.time_elapsed = 0.0
+        music_file_name = "/Users/alan/mywork/pypal/tests/pal1.wav"
 
+        self.my_music = arcade.Sound(music_file_name)
         # If you have sprite lists, you should create them here,
         # and set them to None
 
@@ -30,6 +32,8 @@ class MyGame(arcade.Window):
         """ Set up the game variables. Call to re-start the game. """
         # Create your sprites and sprite lists here
         self.background = arcade.load_texture("/Users/alan/mywork/pypal/resource/bg.jpeg")
+        self.my_music.play()
+
 
     def on_draw(self):
         """
@@ -63,6 +67,7 @@ class MyGame(arcade.Window):
         """
         self.text_angle += 1
         self.time_elapsed += delta_time
+
         pass
 
     def on_key_press(self, key, key_modifiers):

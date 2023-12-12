@@ -133,6 +133,8 @@ tests/*.jpeg
 tests/*.bmp
 .DS_Store
 *.mp3
+*.wav
+*.ogg
 *.mid
 *.jpeg
 *.jpg
