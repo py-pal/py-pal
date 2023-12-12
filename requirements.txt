@@ -1,1 +1,1 @@
-arcade==2.6.17
+arcade==3.0.0.dev25

@@ -22,7 +22,7 @@ class MyGame(arcade.Window):
         # self.background_color = arcade.color.BEIGE
         self.text_angle = 0
         self.time_elapsed = 0.0
-        music_file_name = "/Users/alan/mywork/pypal/tests/pal1.wav"
+        music_file_name = "/Users/alan/mywork/pypal/tests/pal1.mp3"
 
         self.my_music = arcade.Sound(music_file_name)
         # If you have sprite lists, you should create them here,
