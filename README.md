@@ -10,8 +10,4 @@
 
 
 #### 可能出现的错误:
-macos中遇到加载ffmpeg库错误时，可以修改下 site-packages/pyglet/lib.py，修改119行代码为:
-```
-path = ctypes.util.find_library(name)
-```
-暂时不确定 path = self.find_library(name)为何没有生效
+macos中遇到加载ffmpeg库错误时，可以尝试修改下执行 `export DYLD_LIBRARY_PATH="/opt/homebrew/lib"`
