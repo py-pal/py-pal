@@ -80,7 +80,7 @@ def convertImage(im, args, silent=False):
             if not silent:
                 print(
                     "input image built-in transparency color %d index not same as default %d; is it exported from derle? If not, suggest you rerun encoder with quantize, or color may be terrible" % (
-                    info['transparency'], args.transparent_palette_index))
+                        info['transparency'], args.transparent_palette_index))
             args.transparent_palette_index = info['transparency']
     else:  # P but no transparency
         if args.quantize:
@@ -93,7 +93,7 @@ def convertImage(im, args, silent=False):
     if args.quantize:
         pat = getPalette(args)
         pat = pat[0:args.transparent_palette_index * 3] + bytearray(convbytes("\x00\x00\x00")) + pat[
-                                                                                                 args.transparent_palette_index * 3 + 3:]
+            args.transparent_palette_index * 3 + 3:]
         imp = Image.new("P", (16, 16))
         imp.putpalette(pat)
         im = quantizetopalette(im, imp, 1 if args.dither else 0)
@@ -112,7 +112,8 @@ def printProgressBar(iteration, total, prefix='', suffix='', decimals=1, length=
         length      - Optional  : character length of bar (Int)
         fill        - Optional  : bar fill character (Str)
     """
-    percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
+    percent = ("{0:." + str(decimals) + "f}").format(100 *
+                                                     (iteration / float(total)))
     filledLength = int(length * iteration // total)
     bar = fill * filledLength + '-' * (length - filledLength)
     print('\r%s |%s| %s%% %s' % (prefix, bar, percent, suffix), end='\r')

@@ -18,7 +18,8 @@ def process(args):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='convert FBP to palette BMP tool')
+    parser = argparse.ArgumentParser(
+        description='convert FBP to palette BMP tool')
     parser.add_argument('fbp', type=argparse.FileType('rb'),
                         help='FBP file to decode')
     parser.add_argument('-o', '--output', type=argparse.FileType('wb'),
