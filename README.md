@@ -26,8 +26,11 @@
 #### 安装
 
 ```shell
+brew install pre-commit
 pre-commit install
 ```
+
+- [官方指引](https://pre-commit.com/#install)
 
 #### 已启用插件
 
