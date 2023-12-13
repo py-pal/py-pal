@@ -19,11 +19,11 @@
 - 当前为: Python3.12
 - 使用 pyupgrade 保持对代码的自动更新
 
-## Git hook
+### Git hook
 
-### pre-commit
+#### pre-commit
 
-#### 安装
+##### 安装
 
 ```shell
 brew install pre-commit
@@ -32,13 +32,13 @@ pre-commit install
 
 - [官方指引](https://pre-commit.com/#install)
 
-#### 已启用插件
+##### 已启用插件
 
 - pyupgrade
 - black
 - iosrt
 
-## 代码格式化
+### 代码格式化
 
 - Python
   - black
