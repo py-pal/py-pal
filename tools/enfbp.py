@@ -1,9 +1,9 @@
-
 import argparse
-import struct
 import os
-import utilcommon
+import struct
 from ctypes import *
+
+import utilcommon
 from PIL import Image, ImageDraw
 
 args = None
@@ -19,23 +19,43 @@ def process():
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='convert BMP/PNG to RLE tool')
-    parser.add_argument('image', type=argparse.FileType('rb'),
-                        help='image file to encode')
-    parser.add_argument('-d', '--transparent_palette_index', type=int, default=0xff,
-                        help='transparent index for color in palette; default 255')
-    parser.add_argument('-o', '--output', type=argparse.FileType('wb'), required=True,
-                        help='resulting rle')
-    parser.add_argument('--quantize', action='store_true', default=False,
-                        help='for images not with pal palette; notice: expensive!')
-    parser.add_argument('-p', '--palette', type=argparse.FileType('rb'),
-                        help='PAT file for quantize')
-    parser.add_argument('-i', '--palette_id', type=int, default=0,
-                        help='palette id')
-    parser.add_argument('-n', '--night', action='store_true', default=False,
-                        help='use night palette')
-    parser.add_argument('--dither', action='store_true', default=False,
-                        help='whether ditter color when quantizing')
+    parser = argparse.ArgumentParser(description="convert BMP/PNG to RLE tool")
+    parser.add_argument(
+        "image", type=argparse.FileType("rb"), help="image file to encode"
+    )
+    parser.add_argument(
+        "-d",
+        "--transparent_palette_index",
+        type=int,
+        default=0xFF,
+        help="transparent index for color in palette; default 255",
+    )
+    parser.add_argument(
+        "-o",
+        "--output",
+        type=argparse.FileType("wb"),
+        required=True,
+        help="resulting rle",
+    )
+    parser.add_argument(
+        "--quantize",
+        action="store_true",
+        default=False,
+        help="for images not with pal palette; notice: expensive!",
+    )
+    parser.add_argument(
+        "-p", "--palette", type=argparse.FileType("rb"), help="PAT file for quantize"
+    )
+    parser.add_argument("-i", "--palette_id", type=int, default=0, help="palette id")
+    parser.add_argument(
+        "-n", "--night", action="store_true", default=False, help="use night palette"
+    )
+    parser.add_argument(
+        "--dither",
+        action="store_true",
+        default=False,
+        help="whether ditter color when quantizing",
+    )
 
     args = parser.parse_args()
 

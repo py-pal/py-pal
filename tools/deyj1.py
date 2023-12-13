@@ -1,7 +1,8 @@
 import argparse
 import os
-import utilcommon
 from ctypes import *
+
+import utilcommon
 
 
 def deYJ1(input):
@@ -18,11 +19,15 @@ def process(inputf, output):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='YJ1 decompressing util')
-    parser.add_argument('YJ1', type=argparse.FileType('rb'),
-                        help='YJ1 file to extract')
-    parser.add_argument('-o', '--output', type=argparse.FileType('wb'), required=True,
-                        help='filename for unpacked file')
+    parser = argparse.ArgumentParser(description="YJ1 decompressing util")
+    parser.add_argument("YJ1", type=argparse.FileType("rb"), help="YJ1 file to extract")
+    parser.add_argument(
+        "-o",
+        "--output",
+        type=argparse.FileType("wb"),
+        required=True,
+        help="filename for unpacked file",
+    )
 
     args = parser.parse_args()
     if utilcommon.PallibExist():

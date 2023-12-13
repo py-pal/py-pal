@@ -1,11 +1,11 @@
-
 import argparse
-import struct
 import os
+import struct
 import sys
+from ctypes import *
+
 import demkf
 import utilcommon
-from ctypes import *
 from PIL import Image, ImageDraw
 
 args = None
@@ -17,9 +17,9 @@ def process():
     buffer = bytearray(length)
     for i in range(length):
         if sys.version_info[0] < 3:
-            buffer[i] = ord(pat[i])//4
+            buffer[i] = ord(pat[i]) // 4
         else:
-            buffer[i] = pat[i]//4
+            buffer[i] = pat[i] // 4
 
     if args.show:
         pat.show()
@@ -30,13 +30,17 @@ def process():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description='tool for generating PAT from 16x16 image')
-    parser.add_argument('image', type=argparse.FileType('rb'),
-                        help='image file to encode')
-    parser.add_argument('-o', '--output', type=argparse.FileType('wb'),
-                        help='resulting bmp')
-    parser.add_argument('--show', action='store_true', default=False,
-                        help='show palette png')
+        description="tool for generating PAT from 16x16 image"
+    )
+    parser.add_argument(
+        "image", type=argparse.FileType("rb"), help="image file to encode"
+    )
+    parser.add_argument(
+        "-o", "--output", type=argparse.FileType("wb"), help="resulting bmp"
+    )
+    parser.add_argument(
+        "--show", action="store_true", default=False, help="show palette png"
+    )
 
     args = parser.parse_args()
     if not args.show and args.output == None:

@@ -1,8 +1,8 @@
-
 import argparse
 import os
-import utilcommon
 from ctypes import *
+
+import utilcommon
 
 
 def enYJ2(input):
@@ -22,11 +22,15 @@ def process(inputf, output):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='YJ2 compacting util')
-    parser.add_argument('file', type=argparse.FileType('rb'),
-                        help='file to compact')
-    parser.add_argument('-o', '--output', type=argparse.FileType('wb'), required=True,
-                        help='filename for packed file')
+    parser = argparse.ArgumentParser(description="YJ2 compacting util")
+    parser.add_argument("file", type=argparse.FileType("rb"), help="file to compact")
+    parser.add_argument(
+        "-o",
+        "--output",
+        type=argparse.FileType("wb"),
+        required=True,
+        help="filename for packed file",
+    )
 
     args = parser.parse_args()
     if utilcommon.PallibExist():

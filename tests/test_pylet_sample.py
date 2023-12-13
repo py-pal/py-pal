@@ -1,25 +1,22 @@
-
-
 import pyglet
 from pyglet.gl import *
 
-
-
-
-#window = pyglet.window.Window(800, 600)
+# window = pyglet.window.Window(800, 600)
 window = pyglet.window.Window(visible=False, resizable=True)
 
 
-
-version_label = pyglet.text.Label(text="仙剑奇侠传1 高清重制版....",
-                                x=window.width // 2 ,
-                                y=window.height // 2 - 200,
-                                font_size=14,
-                                # anchor_x='center',
-                                # anchor_y='center',
-                                font_name='黑体')
+version_label = pyglet.text.Label(
+    text="仙剑奇侠传1 高清重制版....",
+    x=window.width // 2,
+    y=window.height // 2 - 200,
+    font_size=14,
+    # anchor_x='center',
+    # anchor_y='center',
+    font_name="黑体",
+)
 
 # player_ship = pyglet.sprite.Sprite(img=resources.player_image, x=400, y=300)
+
 
 @window.event
 def on_draw():

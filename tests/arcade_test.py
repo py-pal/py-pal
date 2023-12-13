@@ -29,11 +29,10 @@ class MyGame(arcade.Window):
         # and set them to None
 
     def setup(self):
-        """ Set up the game variables. Call to re-start the game. """
+        """Set up the game variables. Call to re-start the game."""
         # Create your sprites and sprite lists here
         self.background = arcade.load_texture("resource/bg.jpeg")
         self.my_music.play()
-
 
     def on_draw(self):
         """
@@ -44,18 +43,19 @@ class MyGame(arcade.Window):
         self.clear()
         start_x = 0
         start_y = SCREEN_HEIGHT - DEFAULT_LINE_HEIGHT * 1.5
-        arcade.draw_text("Pal1 Remaster",
-                         start_x,
-                         start_y,
-                         arcade.color.WHITE,
-                         DEFAULT_FONT_SIZE * 2,
-                         width=SCREEN_WIDTH,
-                         align="center")
+        arcade.draw_text(
+            "Pal1 Remaster",
+            start_x,
+            start_y,
+            arcade.color.WHITE,
+            DEFAULT_FONT_SIZE * 2,
+            width=SCREEN_WIDTH,
+            align="center",
+        )
 
-        arcade.draw_lrwh_rectangle_textured(0, 0,
-                                            SCREEN_WIDTH, SCREEN_HEIGHT,
-                                            self.background)
-
+        arcade.draw_lrwh_rectangle_textured(
+            0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, self.background
+        )
 
         # Call draw() on all your sprite lists below
 
