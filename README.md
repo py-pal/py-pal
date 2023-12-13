@@ -8,6 +8,3 @@
 * 重新设计脚本系统，添加新的剧情分支
 * 提供地图/关卡编辑器
 
-
-#### 可能出现的错误:
-macos中遇到加载ffmpeg库错误时，可以尝试修改下执行 `export DYLD_LIBRARY_PATH="/opt/homebrew/lib"`

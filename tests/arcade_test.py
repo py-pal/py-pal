@@ -2,8 +2,8 @@ import arcade
 
 DEFAULT_LINE_HEIGHT = 45
 DEFAULT_FONT_SIZE = 20
-SCREEN_WIDTH = 1024
-SCREEN_HEIGHT = 768
+SCREEN_WIDTH = 1600
+SCREEN_HEIGHT = 1000
 SCREEN_TITLE = "Pal1 Remaster"
 
 
@@ -18,11 +18,11 @@ class MyGame(arcade.Window):
 
     def __init__(self, width, height, title):
         super().__init__(width, height, title)
-        self.background = None
-        # self.background_color = arcade.color.BEIGE
+        # self.background = None
+        self.background_color = arcade.color.BLACK
         self.text_angle = 0
         self.time_elapsed = 0.0
-        music_file_name = "/Users/alan/mywork/pypal/tests/pal1.mp3"
+        music_file_name = "resource/pal1.mp3"
 
         self.my_music = arcade.Sound(music_file_name)
         # If you have sprite lists, you should create them here,
@@ -31,7 +31,7 @@ class MyGame(arcade.Window):
     def setup(self):
         """ Set up the game variables. Call to re-start the game. """
         # Create your sprites and sprite lists here
-        self.background = arcade.load_texture("/Users/alan/mywork/pypal/resource/bg.jpeg")
+        self.background = arcade.load_texture("resource/bg.jpeg")
         self.my_music.play()
 
 
