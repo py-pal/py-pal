@@ -46,3 +46,7 @@ pre-commit install
 
 - 文本类
   - Prettier
+
+#### 资源分析工具
+请参照palresearch项目中的内容进行资源分析
+- [palresearch](https://github.com/palxex/palresearch)
